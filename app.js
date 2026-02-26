@@ -12,15 +12,28 @@ import {
 
 // 2) PASTE YOUR FIREBASE CONFIG HERE (from Firebase Console -> Project settings -> Web app)
 const firebaseConfig = {
-  // PASTE_FIREBASE_CONFIG_HERE
-  // example:
-  // apiKey: "...",
-  // authDomain: "...",
-  // databaseURL: "...",
-  // projectId: "...",
-  // storageBucket: "...",
-  // messagingSenderId: "...",
-  // appId: "..."
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBSvb13EWJzxcQnL5Gv8cIg9kvbpKhYhjQ",
+  authDomain: "dynasty5tradeapprovals.firebaseapp.com",
+  databaseURL: "https://dynasty5tradeapprovals-default-rtdb.firebaseio.com",
+  projectId: "dynasty5tradeapprovals",
+  storageBucket: "dynasty5tradeapprovals.firebasestorage.app",
+  messagingSenderId: "178475537398",
+  appId: "1:178475537398:web:12f35e22c11581e3486dd7",
+  measurementId: "G-CEVE8K6TDJ"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 };
 
 const app = initializeApp(firebaseConfig);
