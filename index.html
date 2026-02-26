@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dynasty 5 Trade Approvals</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>Dynasty 5 – Trade Approvals</h1>
+    <p class="sub">Propose a trade, then each owner checks their box. When all 5 approve: <b>Trade ready to send</b>.</p>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <button id="newTradeBtn" class="primary">Enter new Trade Proposal</button>
+
+      <form id="tradeForm" class="hidden">
+        <div class="grid">
+          <label>
+            <span>We send</span>
+            <textarea id="weSend" placeholder="Type what we send..."></textarea>
+          </label>
+
+          <label>
+            <span>We receive</span>
+            <textarea id="weReceive" placeholder="Type what we receive..."></textarea>
+          </label>
+        </div>
+
+        <div class="row">
+          <button type="submit" class="primary">Submit Trade</button>
+          <button type="button" id="cancelBtn" class="ghost">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Current Trade (Top)</h2>
+
+      <div id="tradeBox" class="tradeBox">
+        <div class="muted">No trade proposal yet. Tap “Enter new Trade Proposal”.</div>
+      </div>
+
+      <div id="confirmSection" class="hidden">
+        <h3>Confirmation – only select your box</h3>
+
+        <div class="checks">
+          <label class="check"><input type="checkbox" data-owner="JCort" /> <span>JCort</span></label>
+          <label class="check"><input type="checkbox" data-owner="Troy" /> <span>Troy</span></label>
+          <label class="check"><input type="checkbox" data-owner="Tristan" /> <span>Tristan</span></label>
+          <label class="check"><input type="checkbox" data-owner="Charmin" /> <span>Charmin</span></label>
+          <label class="check"><input type="checkbox" data-owner="Kade" /> <span>Kade</span></label>
+        </div>
+
+        <div id="readyTag" class="readyTag hidden">✅ Trade ready to send</div>
+      </div>
+    </section>
+
+    <footer class="wrap foot">
+      <span class="muted">Tip: Bookmark this page on your iPhone Home Screen.</span>
+    </footer>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
